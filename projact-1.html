@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-1</title>
+</head>
+<body>
+    <script>
+       // -----------------------Q-1------------------------------//
+       document.write("<--------------------------Q-1-------------------------------->","<br/>")
+        const ab = [1, 2, 3, 4, 5];
+        const squaredArray = ab.map(x => x ** 2);
+        document.write("Squared array:", squaredArray ,"</br>");
+
+        const cubedArray = ab.map(x => x ** 3);
+        document.write("Cubed array:", cubedArray,"<br/>");
+
+        // -----------------------Q-2------------------------------//
+       document.write("<--------------------------Q-2-------------------------------->","<br/>")
+        const b = [11, 22, 33, 44, 55];
+        document.write("Records:", b ,"</br>");
+
+        // -----------------------Q-3------------------------------//
+       document.write("<--------------------------Q-3-------------------------------->","<br/>")
+   
+        const array = [11, 22, 33, 44, 55];
+        const elementToFind = 44;
+
+       if (array.includes(elementToFind)) {
+         document.write("No is found","</br>");
+       } else {
+         document.write("No is not found","</br>");
+       }
+  // -----------------------Q-4------------------------------//
+  document.write("<--------------------------Q-4-------------------------------->","<br/>")
+  const c = [10, 20, 30, 40, 50];
+  const sum = c.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+
+  document.write("Sum of array elements:", sum ,"<br/>");
+  // -----------------------Q-5------------------------------//
+  document.write("<--------------------------Q-5-------------------------------->","<br/>")
+  const arr = [11, 22, 33, 44, 55];
+  const even = arr.filter(number => number % 2 === 0);
+  document.write("Even elements:", even,"<br/>");
+
+  const odd = arr.filter(number => number % 2 !== 0);
+  document.write("Odd elements:", odd,"<br/>");
+
+
+  
+  // -----------------------Q-6------------------------------//
+  document.write("<--------------------------Q-6-------------------------------->","<br/>")
+
+  function isLeapYear(year) {
+    return ((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0);
+}
+
+// Example usage:
+document.write( "2024 is :",isLeapYear(2024),"<br/>"); // truee
+document.write("2027 is :",isLeapYear(2027),"<br/>"); // false
+
+
+  // -----------------------Q-7------------------------------//
+  document.write("<--------------------------Q-7-------------------------------->","<br/>")
+  const d = [10, 20, 30, 40, 50];
+  const darr = [11, 22, 33, 44, 55];
+  const mergedArray = [...d, ...darr];
+  document.write("Merged array:", mergedArray,"<br/>");
+
+  // -----------------------Q-8------------------------------//
+  document.write("<--------------------------Q-8-------------------------------->","<br/>")
+  function Student(name, age, marks) {
+    this.name = name;
+    this.age = age;
+    this.marks = marks;
+
+    this.averageMarks = function() {
+        const sum = this.marks.reduce((acc, curr) => acc + curr, 0);
+        return sum / this.marks.length;
+    };
+
+    this.printDetails = function() {
+        document.write(`Name: ${this.name}, Age: ${this.age}, Average Marks: ${this.averageMarks().toFixed(2)} <br/>`);
+    };
+ }
+
+  const student1 = new Student('Abhinav', 21, [70, 92, 84]);
+  student1.printDetails();
+
+  // -----------------------Q-9------------------------------//
+  document.write("<--------------------------Q-9-------------------------------->","<br/>")
+  document.write(" open console log ","<br/>")
+  const a = ["mango", "orange", "mango", "apple", "apple", "pineapple", "apple"];
+const counts = {};
+
+for (const element of a) {
+    counts[element] = counts[element] ? counts[element] + 1 : 1;
+}
+
+console.log("Element counts:", counts);
+
+    </script>
+    
+</body>
+</html>
